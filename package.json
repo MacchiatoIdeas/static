@@ -1,0 +1,20 @@
+{
+  "name": "macchiato-static",
+  "version": "1.0.0",
+  "description": "Macchiato Static Files",
+  "main": "server.js",
+  "scripts": {
+  },
+  "keywords": [
+    "macchiato",
+    "static"
+  ],
+  "author": "Marcelo Jara Almeyda",
+  "license": "MIT",
+  "dependencies": {
+    "node-static": "^0.7.9"
+  },
+  "devDependencies": {
+    "editor.md": "^1.5.0"
+  }
+}
