@@ -2024,10 +2024,11 @@
             //console.error("cmValue", cmValue, newMarkdownDoc);
             
             this.markdownTextarea.text(cmValue);
-            this.markdownTextarea.trigger('change');
             
             cm.save();
-            
+
+            this.markdownTextarea.trigger('change');
+
             if (settings.saveHTMLToTextarea) 
             {
                 this.htmlTextarea.text(newMarkdownDoc);
