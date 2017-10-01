@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Macchiato Static Files",
   "main": "server.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "macchiato",
     "static"
