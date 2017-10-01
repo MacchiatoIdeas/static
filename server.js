@@ -1,7 +1,6 @@
 const static = require('node-static');
 
-const file = new static.Server({
-	rootPath:'./public',
+const file = new static.Server('./public', {
 	headers: {
 		'Access-Control-Allow-Origin': '*',
 		'Access-Control-Allow-Methods': 'GET',
@@ -13,4 +12,4 @@ require('http').createServer(function (request, response) {
   request.addListener('end', function () {
     file.serve(request, response);
   }).resume();
-}).listen(process.env.PORT || 8080);
+}).listen(process.env.PORT || 9090);
