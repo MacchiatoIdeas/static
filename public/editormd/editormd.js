@@ -3600,20 +3600,20 @@
         markedRenderer.paragraph = function(text) {
             var isTeXInline     = /\$\$(.*)\$\$/g.test(text);
             var isTeXLine       = /^\$\$(.*)\$\$$/.test(text);
-            var isTeXAddClass   = (isTeXLine)     ? " class=\"" + editormd.classNames.tex + "\"" : "";
+            var isTeXAddClass   = (isTeXLine)     ? " class=\"tex-line\"" : "";
             var isToC           = (settings.tocm) ? /^(\[TOC\]|\[TOCM\])$/.test(text) : /^\[TOC\]$/.test(text);
             var isToCMenu       = /^\[TOCM\]$/.test(text);
             
-            /*if (!isTeXLine && isTeXInline) 
+            if (!isTeXLine && isTeXInline) 
             {
                 text = text.replace(/(\$\$([^\$]*)\$\$)+/g, function($1, $2) {
-                    return "<span class=\"" + editormd.classNames.tex + "\">" + $2 + "</span>";
+                    return "<span class=\"tex-inline\">" + $2 + "</span>";
                 });
             } 
             else 
             {
                 text = (isTeXLine) ? text : text;
-            }*/ 
+            } 
             
             var tocHTML = "<div class=\"markdown-toc editormd-markdown-toc\">" + text + "</div>";
             
